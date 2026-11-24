@@ -23,7 +23,7 @@ variable "postgresql_clusters" {
     version = string
     tier    = string
     # edition                    = optional(string, "ENTERPRISE")
-    maintenanceDay  = optional(number, 2)
+    maintenanceDay  = optional(string, "tuesday")
     maintenanceHour = optional(number, 2)
     # backupLocation             = optional(string, "EU")
     backupStartTime = optional(string, "22:00")
