@@ -68,12 +68,10 @@ variable "mysql_clusters" {
 
 variable "private_network_id" {
   type        = string
-  default     = ""
   description = "Private network id for databases"
 }
 
 variable "private_network_name" {
   type        = string
-  default     = ""
   description = "Private network name for databases"
 }
