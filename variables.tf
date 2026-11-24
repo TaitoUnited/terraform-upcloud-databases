@@ -24,7 +24,7 @@ variable "postgresql_clusters" {
     tier    = string
     # edition                    = optional(string, "ENTERPRISE")
     maintenanceDay  = optional(string, "tuesday")
-    maintenanceHour = optional(number, 2)
+    maintenanceTime = optional(string, "22:00:00")
     # backupLocation             = optional(string, "EU")
     backupStartTime = optional(string, "22:00")
     # pointInTimeRecoveryEnabled = optional(bool, true)
