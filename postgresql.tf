@@ -27,7 +27,7 @@ resource "upcloud_managed_database_postgresql" "postgres" {
   plan_storage_gib = 20
 
   maintenance_window_dow  = each.value.maintenanceDay
-  maintenance_window_time = each.value.maintenanceTime
+  maintenance_window_time = "${each.value.maintenanceTime}:00"
 
   properties {
     version = each.value.version
