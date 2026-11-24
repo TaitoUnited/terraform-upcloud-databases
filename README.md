@@ -7,11 +7,12 @@ provider "upcloud" {
 }
 
 module "databases" {
-  source              = "TaitoUnited/databases/upcloud"
-  version             = "0.0.1"
+  source               = "TaitoUnited/databases/upcloud"
+  version              = "0.0.1"
 
-  postgresql_clusters = yamldecode(file("${path.root}/../infra.yaml"))["postgresqlClusters"]
-  private_network_id  = module.network.network.id
+  postgresql_clusters  = yamldecode(file("${path.root}/../infra.yaml"))["postgresqlClusters"]
+  private_network_id   = module.network.network.id
+  private_network_name = module.network.network.name
 }
 ```
 
